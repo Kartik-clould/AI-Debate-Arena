@@ -1,0 +1,339 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111827;
+  color: white;
+}
+
+.app {
+  max-width: 1150px;
+  margin: auto;
+  padding: 50px 25px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.topic-box {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.topic-box input {
+  width: 650px;
+  padding: 17px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  background: #1f2937;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.topic-box input:focus {
+  border-color: #60a5fa;
+}
+
+.topic-box button {
+  padding: 17px 28px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.topic-box button:hover {
+  background: #1d4ed8;
+}
+
+.loading {
+  text-align: center;
+  margin: 60px 0;
+}
+
+.loading p {
+  font-size: 20px;
+  margin: 15px 0 5px;
+}
+
+.loading span {
+  color: #9ca3af;
+}
+
+.spinner {
+  width: 35px;
+  height: 35px;
+  border: 4px solid #374151;
+  border-top: 4px solid #60a5fa;
+  border-radius: 50%;
+  margin: auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.debate-section {
+  margin-top: 40px;
+}
+
+.topic-display {
+  background: #1f2937;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 40px;
+  text-align: center;
+  border: 1px solid #374151;
+}
+
+.topic-display span {
+  font-size: 12px;
+  color: #9ca3af;
+  letter-spacing: 2px;
+}
+
+.topic-display h2 {
+  margin-bottom: 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.debate-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.agent-card {
+  background: #1f2937;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: left;
+  border: 1px solid #374151;
+}
+
+.pro-card {
+  border-top: 4px solid #3b82f6;
+}
+
+.con-card {
+  border-top: 4px solid #ef4444;
+}
+
+.agent-card h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.agent-card h3 {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-top: 25px;
+}
+
+.argument-text {
+  color: #d1d5db;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.argument-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.argument-text::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 10px;
+}
+
+.read-more {
+  margin-top: 18px;
+  background: transparent;
+  border: none;
+  color: #60a5fa;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+@media (max-width: 800px) {
+  .debate-area,
+  .scores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topic-box {
+    flex-direction: column;
+  }
+
+  .topic-box input {
+    width: auto;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+}
+
+.judge-section {
+  margin-top: 55px;
+}
+
+
+
+.scores-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.score-card {
+  background: #1f2937;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #374151;
+}
+
+.pro-score {
+  border-top: 4px solid #3b82f6;
+}
+
+.con-score {
+  border-top: 4px solid #ef4444;
+}
+
+.score-card h3 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.score-card p {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  margin: 0;
+  border-bottom: 1px solid #374151;
+  color: #d1d5db;
+}
+
+.score-card p:last-child {
+  border-bottom: none;
+}
+
+.score-card span {
+  font-weight: bold;
+  color: white;
+}
+
+
+.score-label {
+  font-weight: normal !important;
+  color: #d1d5db !important;
+}
+
+
+.ann-section {
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+.winner-card {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+}
+
+.ann-label {
+  color: #9ca3af;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.winner {
+  margin: 10px 0 15px;
+  font-size: 42px;
+}
+
+.ann-description {
+  color: #9ca3af;
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.probability-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.probability-card {
+  background: #111827;
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid #374151;
+}
+
+.pro-probability {
+  border-top: 4px solid #3b82f6;
+}
+
+.con-probability {
+  border-top: 4px solid #ef4444;
+}
+
+.probability-card h3 {
+  margin-top: 0;
+}
+
+.probability {
+  font-size: 38px;
+  font-weight: bold;
+  margin: 15px 0 5px;
+}
+
+.probability-card p {
+  color: #9ca3af;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .probability-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .winner {
+    font-size: 32px;
+  }
+}
